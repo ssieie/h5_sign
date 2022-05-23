@@ -1,0 +1,20 @@
+{
+  "name": "h5_sign",
+  "version": "1.0.0",
+  "description": "H5上的签字工具",
+  "main": "./dist/sign.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssieie/h5_sign.git"
+  },
+  "keywords": [],
+  "author": "zhaox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssieie/h5_sign/issues"
+  },
+  "homepage": "https://github.com/ssieie/h5_sign#readme"
+}
