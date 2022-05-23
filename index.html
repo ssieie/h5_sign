@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #sign {
+      width: 433px;
+      height: 322px;
+      border: 2px solid;
+      display: none;
+    }
+  </style>
+  <body>
+    <div id="sign"></div>
+    <div onclick="toggleDisplay()">打开/关闭</div>
+    <div onclick="cx()">撤销</div>
+    <div onclick="qk()">清空</div>
+    <div onclick="bc()">保存</div>
+    <img src="" id="testImg" alt="" />
+  </body>
+  <script src="./dist/sign.min.js"></script>
+  <script>
+    const SIGN = zx("#sign");
+    let flag = false;
+    function toggleDisplay() {
+      flag = !flag;
+      document.querySelector("#sign").style.display = flag ? "block" : "none";
+      if (flag) {
+        SIGN.color("blue").size(5).smooth().open();
+      } else {
+        SIGN.close(false);
+      }
+    }
+
+    function cx(params) {
+      SIGN.revoke();
+    }
+
+    function qk(params) {
+      SIGN.clearPath();
+    }
+
+    function bc(params) {
+      // SIGN.saveToIMG();
+      let a = SIGN.saveToURL();
+      document.querySelector("#testImg").src = a;
+    }
+  </script>
+</html>
